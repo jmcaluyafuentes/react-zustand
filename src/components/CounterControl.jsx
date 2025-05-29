@@ -1,8 +1,11 @@
 import React from 'react'
+import useCounter from '../../stores/counterStore'
 
-const CounterControl = ({ counter, setCounter }) => {
+const CounterControl = () => {
+  const { incrementCounter } = useCounter();
+
   return (
-    <button onClick={() => setCounter(counter + 1)}>Increment Counter</button>
+    <button onClick={incrementCounter}>Increment Counter</button>
   )
 }
 
